@@ -104,7 +104,7 @@ const filteredProducts = computed(() => {
 </script>
 
 <template>
-  <div class="boutique-container" :class="{ 'grid-empty': cartEmpty }">
+  <div class="d-flex flex-column">
     <Shop
       @update-filter="updateFilter"
       @add-product-to-cart="addProductToCart"
@@ -123,16 +123,4 @@ const filteredProducts = computed(() => {
   </div>
 </template>
 
-<style scoped lang="scss">
-.boutique-container {
-  display: grid;
-  grid-template-columns: 75% 25%;
-}
-.grid-empty {
-  grid-template-columns: 100%;
-}
-.cart {
-  background-color: white;
-  border-left: var(--border);
-}
-</style>
+<style scoped lang="scss"></style>
